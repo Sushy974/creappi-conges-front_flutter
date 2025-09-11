@@ -29,7 +29,7 @@ class MotDePasseInput extends FormzInput<String, MotDePasseValidationError> {
   const MotDePasseInput.dirty([super.value = '']) : super.dirty();
 
   static final _motDePasseRegExp = RegExp(
-    r'^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}$',
+    r'^(?=.*[a-zA-Z])(?=.*\d).{6,}$',
   );
 
   @override

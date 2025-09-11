@@ -1,8 +1,7 @@
 import 'package:creappi_conge/app/app.dart';
 import 'package:creappi_conge/bootstrap.dart';
 import 'package:creappi_conge/repositories/auth_repository.dart';
-import 'package:creappi_conge/repositories/demandes_repository.dart'
-    show DemandesRepository;
+import 'package:creappi_conge/repositories/demandes_repository.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,10 +17,10 @@ void main() {
       return MultiRepositoryProvider(
         providers: [
           RepositoryProvider<AuthRepository>(
-            create: (context) => AuthRepository(),
+            create: (context) => RenderAuthRepository(),
           ),
           RepositoryProvider<DemandesRepository>(
-            create: (context) => DemandesRepository(),
+            create: (context) => RenderDemandesRepository(),
           ),
         ],
         child: const App(),
